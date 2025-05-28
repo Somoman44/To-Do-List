@@ -12,6 +12,16 @@ addTaskButton.onclick = function(){
     displayItems();
 }
 
+document.addEventListener("keydown",function(event){
+    if(event.key=="Enter"){
+    let taskInputValue = taskInput.value.trim();
+    console.log(taskInputValue);
+    let key = "task_" + Date.now();
+    localStorage.setItem(key,JSON.stringify({text:taskInputValue,checked:false}));
+    displayItems();
+    }
+})
+
 function RemoveTask(){
 let deleteList = document.querySelectorAll("li");
 for(const i of deleteList){
