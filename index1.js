@@ -18,6 +18,7 @@ document.addEventListener("keydown",function(event){
     console.log(taskInputValue);
     let key = "task_" + Date.now();
     localStorage.setItem(key,JSON.stringify({text:taskInputValue,checked:false}));
+    taskInput.value = "";
     displayItems();
     }
 })
