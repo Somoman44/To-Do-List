@@ -1,0 +1,78 @@
+body{
+    font-family:"poppins";
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FAE3C6;
+    transition: ease 0.2s;
+}
+h1{
+    font-size: 50pt;
+    text-align: center;
+    font-weight: bold;
+    color:#F564A9;
+}
+form{
+    font-size: 20pt;
+    display: flex;
+    justify-content: center;
+    gap:7%;
+    margin-top:20px;
+    align-items: center;
+    color:#F564A9;
+    background-color:#533B4D ;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width:50%;
+}
+#taskInput{
+    background-color:#FAE3C6;
+    border:none;
+    border-radius:20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #f04f9c;
+    border :2px solid #533B4D ;
+
+}
+#taskInput:focus{
+    background-color:#edd7bc;
+    border :2px solid #F564A9;
+    outline: none;
+}
+#addTaskButton{
+    background-color: #80385f;
+    border-radius: 50%;
+}
+
+#taskList{
+    font-size: 20pt;
+    margin-top:20px;
+    width: 70%;
+    align-self: center;
+    
+}
+#taskList>li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap:7%;
+    margin-top: 20px;
+    background-color: #533B4D ;
+    color:#F564A9;
+    border-radius:20px;
+   
+}
+#taskList>li>p{
+    width:70%;
+    margin:0;
+}
+input[type="checkbox"]{
+    accent-color: #F564A9;
+    width:20px;
+    height: 20px;
+
+}
