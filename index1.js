@@ -24,6 +24,7 @@ document.addEventListener("keydown",function(event){
         addTaskButton.classList.remove("tskFocus");
     },100);
     let taskInputValue = taskInput.value.trim();
+    if(taskInputValue=="")return;
     console.log(taskInputValue);
     let key = "task_" + Date.now();
     localStorage.setItem(key,JSON.stringify({text:taskInputValue,checked:false}));
