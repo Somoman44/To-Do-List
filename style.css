@@ -102,6 +102,7 @@ ul{
 
 @media screen and (max-width:1200px){
     #addTaskButton{
+        margin-top:10px;
         margin-bottom:10px;
     }
     form{
