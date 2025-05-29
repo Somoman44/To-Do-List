@@ -44,6 +44,25 @@ form{
 #addTaskButton{
     background-color: #80385f;
     border-radius: 50%;
+    border: 2px solid #80385f;
+}
+#addTaskButton:hover{
+    background-color:#6b2f4f;
+}
+.tskFocus{
+    border:2px solid white !important;
+}
+.delete{
+    height: 40px;
+    width:40px;
+    padding:5px;
+    border-radius:50%;
+}
+.delete:hover{
+    background-color:#43303e;
+}
+.dltFocus{
+    color:white !important;
 }
 
 #taskList{
@@ -82,6 +101,9 @@ ul{
 }
 
 @media screen and (max-width:1200px){
+    #addTaskButton{
+        margin-bottom:10px;
+    }
     form{
         display:flex;
         flex-direction: column;
