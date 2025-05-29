@@ -5,6 +5,7 @@ let taskList = document.querySelector("#taskList");
 
 addTaskButton.onclick = function(){
     let taskInputValue = taskInput.value.trim();
+    if(taskInputValue=="")return;
     console.log(taskInputValue);
     let key = "task_" + Date.now();
     localStorage.setItem(key,JSON.stringify({text:taskInputValue,checked:false}));
