@@ -4,6 +4,10 @@ let taskList = document.querySelector("#taskList");
 
 
 addTaskButton.onclick = function(){
+    this.classList.toggle("tskFocus");
+    setTimeout(function(){
+        addTaskButton.classList.remove("tskFocus");
+    },100);
     let taskInputValue = taskInput.value.trim();
     if(taskInputValue=="")return;
     console.log(taskInputValue);
@@ -15,6 +19,10 @@ addTaskButton.onclick = function(){
 
 document.addEventListener("keydown",function(event){
     if(event.key=="Enter"){
+    addTaskButton.classList.toggle("tskFocus");
+    setTimeout(function(){
+        addTaskButton.classList.remove("tskFocus");
+    },100);
     let taskInputValue = taskInput.value.trim();
     console.log(taskInputValue);
     let key = "task_" + Date.now();
@@ -29,8 +37,13 @@ let deleteList = document.querySelectorAll("li");
 for(const i of deleteList){
     let key = i.classList[0];
     i.lastElementChild.onclick = function(){
-        localStorage.removeItem(key);
-        displayItems();
+        let element = this;
+        this.classList.toggle("dltFocus");
+        setTimeout(function(){
+            element.classList.toggle("dltFocus");
+            localStorage.removeItem(key);
+            displayItems();
+        },80);
     }
 }
 }
